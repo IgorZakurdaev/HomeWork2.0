@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class SearchTest {
     @Test
     void successfulSearchTest(){
-        Configuration.pageLoadStrategy = "trigger";
+        Configuration.pageLoadStrategy = "brigger";
         open("https://www.google.com/");
         $("[name=q]").setValue("selenide").pressEnter();
         $("[id=search]").shouldHave(text("https://ru.google.org"));
